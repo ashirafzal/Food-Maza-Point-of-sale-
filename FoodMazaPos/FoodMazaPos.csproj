@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{914DD919-DA36-4F27-9A7E-17586BEAA92A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FoodMazaPos</RootNamespace>
+    <AssemblyName>FoodMazaPos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.0-beta2\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.1.1.0\lib\net45\FireSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp.Serialization.JsonNet, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FireSharp.Serialization.JsonNet.1.1.0\lib\net45\FireSharp.Serialization.JsonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationConfirmation.cs" />
+    <Compile Include="ActivationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivationForm.Designer.cs">
+      <DependentUpon>ActivationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activeinfo.cs" />
+    <Compile Include="AnnualSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnnualSales.Designer.cs">
+      <DependentUpon>AnnualSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelInvoice.Designer.cs">
+      <DependentUpon>CancelInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryForm.Designer.cs">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailySales.Designer.cs">
+      <DependentUpon>DailySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs" />
+    <Compile Include="DeletedInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletedInvoice.Designer.cs">
+      <DependentUpon>DeletedInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditInvoice.Designer.cs">
+      <DependentUpon>EditInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportToExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportToExcel.Designer.cs">
+      <DependentUpon>ExportToExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDetails.Designer.cs">
+      <DependentUpon>InvoiceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCategory.Designer.cs">
+      <DependentUpon>ManageCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageProduct.Designer.cs">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthlySales.Designer.cs">
+      <DependentUpon>MonthlySales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductPrice.Designer.cs">
+      <DependentUpon>ProductPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesSummary.Designer.cs">
+      <DependentUpon>SalesSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocks.Designer.cs">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatestocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatestocks.Designer.cs">
+      <DependentUpon>updatestocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users.Designer.cs">
+      <DependentUpon>users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklySales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklySales.Designer.cs">
+      <DependentUpon>WeeklySales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivationForm.resx">
+      <DependentUpon>ActivationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnnualSales.resx">
+      <DependentUpon>AnnualSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelInvoice.resx">
+      <DependentUpon>CancelInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryForm.resx">
+      <DependentUpon>CategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailySales.resx">
+      <DependentUpon>DailySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletedInvoice.resx">
+      <DependentUpon>DeletedInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInvoice.resx">
+      <DependentUpon>EditInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportToExcel.resx">
+      <DependentUpon>ExportToExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDetails.resx">
+      <DependentUpon>InvoiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCategory.resx">
+      <DependentUpon>ManageCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduct.resx">
+      <DependentUpon>ManageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlySales.resx">
+      <DependentUpon>MonthlySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductPrice.resx">
+      <DependentUpon>ProductPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SalesSummary.resx">
+      <DependentUpon>SalesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocks.resx">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatestocks.resx">
+      <DependentUpon>updatestocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users.resx">
+      <DependentUpon>users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklySales.resx">
+      <DependentUpon>WeeklySales.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\FoodMaza.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\FoodMaza2.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\FoodMaza2_log.ldf">
+      <DependentUpon>FoodMaza2.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\FoodMaza_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FoodMaza.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
